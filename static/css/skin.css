@@ -1,0 +1,35 @@
+.baseBgColorNoActive {
+	background-color: #28acff;
+}
+
+.baseBgColorWithActive {
+	background-color: #28acff;
+}
+
+.baseBgColorWithActive:ACTIVE {
+	background-color: #28acff;
+}
+
+.baseBgColorInvalid {
+	background-color: #ccc;
+}
+
+.baseBorder {
+	border: 0.5px solid #28acff;
+}
+
+[data-dpr="1"] .baseBorder {
+	border: 1px solid #28acff;
+}
+
+.baseColorNoAcitve {
+	color: #28acff;
+}
+
+.stressColorNoActive {
+	color: #E84D38;
+}
+
+.stressBgColorNoActive {
+	background-color: #E84D38;
+}
