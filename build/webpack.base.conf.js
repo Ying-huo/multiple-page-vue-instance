@@ -52,7 +52,8 @@ module.exports = {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       loader: 'url',
       query: {
-        limit: 10000,
+        // 转成base64的图片限制大小
+        // limit: 10000,
         name: utils.assetsPath('img/[name].[hash:7].[ext]')
       }
     },
