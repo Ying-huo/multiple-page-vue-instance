@@ -1,5 +1,5 @@
 var isCordovaReady = false;
-
+var isAppPlatform = false;
 if (isAppPlatform) {
   document.addEventListener("deviceready", function (e) {
     isCordovaReady = true;

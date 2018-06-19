@@ -15,3 +15,6 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
+## 注意
+### 页面全部加载src下的module文件夹中

@@ -8,6 +8,7 @@ input, textarea, select {
 
 img {
 	vertical-align: top;
+	width: 100%;
 }
 
 #detail_div img {
