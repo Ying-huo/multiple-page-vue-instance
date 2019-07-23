@@ -2,6 +2,7 @@
   <div id="app">
     <img src="./images/logo.png">
     <div>详情内容</div>
+    <div>测试内容</div>
   </div>
 </template>
 
