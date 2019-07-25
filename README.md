@@ -1,20 +1,5 @@
-# vue多页面应用
-> A Vue.js project
+# multiple-page-vue-instance
 
-### 按照一个页面一个文件夹，文件夹中包含这个页面的js和css。
+## 介绍
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-## 注意
-### 页面全部加载src下的module文件夹中
+一个多页面的 demo, 克隆后即可使用

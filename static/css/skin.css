@@ -1,35 +1,57 @@
+/* 基础的背景色样式 */
 .baseBgColorNoActive {
-	background-color: #28acff;
+  background-color: #1dc994;
 }
 
 .baseBgColorWithActive {
-	background-color: #28acff;
+  background-color: #1dc994;
 }
 
-.baseBgColorWithActive:ACTIVE {
-	background-color: #28acff;
+.baseBgColorWithActive:active {
+  background-color: #1dc994;
 }
 
+/* 基础的颜色样式 */
+.baseColorNoAcitve {
+  color: #1dc994;
+}
+
+.baseColorWithActive {
+  color: #1dc994;
+}
+
+.baseColorWithActive:active {
+  color: #1dc994;
+}
+
+/* 无效背景色样式 */
 .baseBgColorInvalid {
-	background-color: #ccc;
+  background-color: #ccc;
+}
+
+/* 无效颜色样式 */
+.baseColorInvalid {
+  color: #ccc;
+}
+
+/* 强调背景色样式 */
+.stressBgColorNoActive {
+  background-color: #e84d38;
+}
+
+/* 强调颜色样式 */
+.stressColorNoActive {
+  color: #e84d38;
 }
 
 .baseBorder {
-	border: 0.5px solid #28acff;
+  border: 0.5px solid #1dc994;
 }
 
-[data-dpr="1"] .baseBorder {
-	border: 1px solid #28acff;
+[data-dpr='1'] .baseBorder {
+  border: 1px solid #1dc994;
 }
 
-.baseColorNoAcitve {
-	color: #28acff;
-}
-
-.stressColorNoActive {
-	color: #E84D38;
-}
-
-.stressBgColorNoActive {
-	background-color: #E84D38;
+.baseBorderColor {
+  border-color: #1dc994;
 }

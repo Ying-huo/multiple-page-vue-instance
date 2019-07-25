@@ -1,1 +1,0 @@
-window.alert('我就是一个普通的js文件');
