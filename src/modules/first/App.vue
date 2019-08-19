@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    一个例子
+    <router-view></router-view>
   </div>
 </template>
 
@@ -10,7 +10,12 @@ export default {
   components: {
   },
   data() {
-    return {}
+    return {
+    }
+  },
+  computed: {
+  },
+  methods: {
   }
 }
 </script>
