@@ -1,18 +1,38 @@
-const utils = require('./utils')
-const webpack = require('webpack')
-const config = require('../config')
-const merge = require('webpack-merge')
 const path = require('path')
-const baseWebpackConfig = require('./webpack.base.conf')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const os = require('os')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
 const portfinder = require('portfinder')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const utils = require('./utils')
+const config = require('../config')
+const baseWebpackConfig = require('./webpack.base.conf')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const HOST = process.env.HOST
+const HOST = process.env.HOST || getIPAdress()
 const PORT = process.env.PORT && Number(process.env.PORT)
+
+// 获取本机ip地址
+function getIPAdress() {
+  var interfaces = os.networkInterfaces()
+  for (var devName in interfaces) {
+    var iface = interfaces[devName]
+    for (var i = 0; i < iface.length; i++) {
+      var alias = iface[i]
+      if (
+        alias.family === 'IPv4' &&
+        alias.address !== '127.0.0.1' &&
+        !alias.internal
+      ) {
+        return alias.address
+      }
+    }
+  }
+}
+
 const devWebpackConfig = merge(baseWebpackConfig, {
-  entry: utils.devEntries(),
+  // entry: utils.devEntries(),
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.dev.cssSourceMap,
@@ -89,8 +109,9 @@ module.exports = env => {
         devWebpackConfig.plugins = devWebpackConfig.plugins.concat(
           utils.devHtmlPlugin(envModule)
         )
-        devWebpackConfig.entry = utils.devEntries(envModule)
-        let urls = Object.keys(utils.devEntries(envModule))
+        const entries = utils.devEntries(envModule)
+        devWebpackConfig.entry = entries
+        let urls = Object.keys(entries)
           .map(
             i => `http://${devWebpackConfig.devServer.host}:${port}/${i}.html`
           )
